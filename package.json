@@ -1,13 +1,17 @@
 {
-  "name": "@botmax/cnj",
+  "name": "@botmaxbr/cnj",
   "version": "0.0.1",
   "description": "Conjunto de ferramentas para tratar númeração processual, em conformidade com os padrões do CNJ",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --pretty --transpile-only src/server.ts",
     "build": "tsc --project tsconfig.build.json && tsc-alias -p tsconfig.json",
     "test": "NODE_ENV=testing jest",
-    "test:tdd": "yarn test --watch"
+    "test:tdd": "yarn test --watch",
+    "prepare": "yarn build",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
