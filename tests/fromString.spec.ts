@@ -1,4 +1,4 @@
-import { Cnj } from '@/Cnj';
+import { Cnj } from '@/index';
 
 describe('method fromString', () => {
   describe('with number', () => {

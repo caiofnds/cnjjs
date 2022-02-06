@@ -1,6 +1,6 @@
 {
   "name": "@botmaxbr/cnj",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Conjunto de ferramentas para tratar númeração processual, em conformidade com os padrões do CNJ",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -44,7 +44,7 @@
     "tsconfig-paths": "^3.10.1",
     "typescript": "^4.2.4"
   },
-  "prisma": {
-    "seed": "yarn seed"
-  }
+  "files": [
+    "lib/**/*"
+  ]
 }
