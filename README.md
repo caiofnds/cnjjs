@@ -28,7 +28,6 @@
 	      </ul>
       </ul>
     </li>
-    <!-- <li><a href="#licensa">Licensa</a></li> -->
     <li><a href="#sobre-botmax">Sobre a Botmax</a></li>
     <li><a href="#referencias">Referências</a></li>
   </ol>
@@ -41,8 +40,8 @@
 <div id=introducao></div>
 
 ## Introdução 
-<div align=center>
-<a href="https://github.com/filipedonatti/cnj-readme/blob/main/Licença.txt"><img src="https://img.shields.io/badge/Licensa-MIT-red"></a> <a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/Linguagem-Typescript-blue"></a>
+<div align=right>
+<a href="https://github.com/filipedonatti/cnj-readme/blob/main/Licença.txt"><img src="https://img.shields.io/badge/Licença-MIT-red"></a> <a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/Linguagem-Typescript-blue"></a>
 
 </div>
 	
