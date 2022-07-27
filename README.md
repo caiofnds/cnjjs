@@ -41,7 +41,7 @@
 
 ## Introdução 
 <div align=right>
-<a href="https://github.com/filipedonatti/cnj-readme/blob/main/Licença.txt"><img src="https://img.shields.io/badge/Licença-MIT-red"></a> <a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/Linguagem-Typescript-blue"></a>
+<a href="https://github.com/botmaxbr/cnj/blob/main/Licença"><img src="https://img.shields.io/badge/Licença-MIT-red"></a> <a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/Linguagem-Typescript-blue"></a>
 
 </div>
 	
@@ -395,11 +395,19 @@ Cnj.withoutCheckDigit(1234567, 8901, 2, 34, 5678); // output -> 1234567-88.8901.
 
 <div id=sobre-botmax></div>
 
+
 ## Para saber mais sobre a Botmax
 
-Visite a [Homepage da Botmax](https://www.botmax.io).
+<div align=right>
+<a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/Processos Tratados -200m+-blueviolet"></a>
 
-Uma API de pesquisa de processos judiciais. 
+</div>
+
+<br>
+
+> Inteligência de processos jurídicos eletrônicos.
+
+Visite a [Homepage da Botmax](https://www.botmax.io).
 
 
 <p align="right">(<a href="#top">voltar ao topo</a>)</p>
