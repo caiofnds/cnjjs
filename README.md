@@ -124,7 +124,7 @@ npm install cnj
 ```
 ### Por [Yarn](https://yarnpkg.com/getting-started)
 ```sh
-yarn install cnj
+yarn add cnj
 ```
 
 <p align="right">(<a href="#top">voltar ao topo</a>)</p>
