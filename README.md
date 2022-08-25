@@ -120,11 +120,11 @@ Tanto a biblioteca quanto as APIs da Botmax foram escrita em typescript, para co
 
 ### Por [Node Package Manager (npm)](https://docs.npmjs.com/about-npm)
 ```sh
-npm install cnj
+npm install @botmax/cnj
 ```
 ### Por [Yarn](https://yarnpkg.com/getting-started)
 ```sh
-yarn add cnj
+yarn add @botmaxbr/cnj
 ```
 
 <p align="right">(<a href="#top">voltar ao topo</a>)</p>
