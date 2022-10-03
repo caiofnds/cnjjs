@@ -9,6 +9,10 @@ interface ICnj {
   oooo: number;
 }
 
+const notNumber = /^0+|[^\d]+/g;
+const cnjRegExp = /(\d{1,7})-?(\d{1,2})\.?(\d{1,4})\.?(\d{1})\.?(\d{1,2})\.?(\d{1,4})/;
+const cnjTrtRegExp = /(\d{1,7})-?XX\.?(\d{1,4})\.?5\.?(\d{1,2})\.?(\d{1,4})/;
+
 export class Cnj {
   nnnnnnn: number;
 
@@ -32,9 +36,6 @@ export class Cnj {
   }
 
   static fromString(string: string) {
-    const notNumber = /^0+|[^\d]+/g;
-    const cnjRegExp = /(\d{1,7})-?(\d{1,2})\.?(\d{1,4})\.?(\d{1})\.?(\d{1,2})\.?(\d{1,4})/;
-    const cnjTrtRegExp = /(\d{1,7})-?XX\.?(\d{1,4})\.?5\.?(\d{1,2})\.?(\d{1,4})/;
     const splitted = string.split(notNumber);
 
     let nnnnnnn: string;
@@ -51,7 +52,7 @@ export class Cnj {
       );
     }
 
-    if (string.match(notNumber) && string.match(cnjRegExp) && splitted.length === 6) {
+    if (notNumber.test(string) && cnjRegExp.test(string) && splitted.length === 6) {
       nnnnnnn = `${splitted[0].replace(notNumber, '')}`.padStart(7, '0');
       dd = `${splitted[1].replace(notNumber, '')}`.padStart(2, '0');
       aaaa = `${splitted[2].replace(notNumber, '')}`.padStart(4, '0');
