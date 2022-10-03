@@ -93,4 +93,19 @@ describe('method toString', () => {
       expect(cnj).toEqual(expected);
     });
   });
+  describe('string trt without digit', () => {
+    const expected = '0000001-61.2022.5.01.0001';
+    test('0000001-XX.2022.5.01.0001', () => {
+      const cnj = Cnj.fromString('0000001-XX.2022.5.01.0001').toString();
+      expect(cnj).toEqual(expected);
+    });
+    test('1-XX.2022.5.01.1', () => {
+      const cnj = Cnj.fromString('1-XX.2022.5.01.1').toString();
+      expect(cnj).toEqual(expected);
+    });
+    test('0000001XX20225010001', () => {
+      const cnj = Cnj.fromString('0000001XX20225010001').toString();
+      expect(cnj).toEqual(expected);
+    });
+  });
 });

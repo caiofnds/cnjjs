@@ -141,4 +141,18 @@ describe('method isValid', () => {
       expect(validity).toBeTruthy();
     });
   });
+  describe('valid number trt true', () => {
+    test('0000001-XX.2022.5.01.0001', () => {
+      const validity = Cnj.fromString('0000001-XX.2022.5.01.0001').isValid();
+      expect(validity).toBeTruthy();
+    });
+    test('1-XX.2022.5.01.1', () => {
+      const validity = Cnj.fromString('1-XX.2022.5.01.1').isValid();
+      expect(validity).toBeTruthy();
+    });
+    test('0000001XX20225010001', () => {
+      const validity = Cnj.fromString('0000001XX20225010001').isValid();
+      expect(validity).toBeTruthy();
+    });
+  });
 });

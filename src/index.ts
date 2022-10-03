@@ -34,6 +34,7 @@ export class Cnj {
   static fromString(string: string) {
     const notNumber = /^0+|[^\d]+/g;
     const cnjRegExp = /(\d{1,7})-?(\d{1,2})\.?(\d{1,4})\.?(\d{1})\.?(\d{1,2})\.?(\d{1,4})/;
+    const cnjTrtRegExp = /(\d{1,7})-?XX\.?(\d{1,4})\.?5\.?(\d{1,2})\.?(\d{1,4})/;
     const splitted = string.split(notNumber);
 
     let nnnnnnn: string;
@@ -42,6 +43,13 @@ export class Cnj {
     let j: string;
     let tr: string;
     let oooo: string;
+
+    if (cnjTrtRegExp.test(string)) {
+      [, nnnnnnn, aaaa, tr, oooo] = string.match(cnjTrtRegExp);
+      return this.withoutCheckDigit(
+        parseInt(nnnnnnn, 10), parseInt(aaaa, 10), 5, parseInt(tr, 10), parseInt(oooo, 10),
+      );
+    }
 
     if (string.match(notNumber) && string.match(cnjRegExp) && splitted.length === 6) {
       nnnnnnn = `${splitted[0].replace(notNumber, '')}`.padStart(7, '0');
