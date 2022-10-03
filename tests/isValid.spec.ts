@@ -108,6 +108,14 @@ describe('method isValid', () => {
       const validity = Cnj.fromString('0000001-40.2001.9.27.0001').isValid();
       expect(validity).toBeFalsy();
     });
+    test('5257aaab-90c8-4d74-b947-5bcf3289d103', () => {
+      const validity = Cnj.fromString('5257aaab-90c8-4d74-b947-5bcf3289d103').isValid();
+      expect(validity).toBeFalsy();
+    });
+    test('36a4742e-18ce-4f55-9232-ea2b1ba3362e', () => {
+      const validity = Cnj.fromString('36a4742e-18ce-4f55-9232-ea2b1ba3362e').isValid();
+      expect(validity).toBeFalsy();
+    });
   });
   describe('valid number não formatado false', () => {
     test('string', () => {
@@ -153,6 +161,16 @@ describe('method isValid', () => {
     test('0000001XX20225010001', () => {
       const validity = Cnj.fromString('0000001XX20225010001').isValid();
       expect(validity).toBeTruthy();
+    });
+  });
+  describe('valid number com ano incorretp', () => {
+    test('0000001-32.1849.1.01.0001', () => {
+      const validity = Cnj.fromString('0000001-32.1849.1.01.0001').isValid();
+      expect(validity).toBeFalsy();
+    });
+    test('0506354-51.2050.8.09.0051', () => {
+      const validity = Cnj.fromString('0506354-51.2050.8.09.0051').isValid();
+      expect(validity).toBeFalsy();
     });
   });
 });

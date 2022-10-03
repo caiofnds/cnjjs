@@ -36,6 +36,11 @@ export class Cnj {
   }
 
   static fromString(string: string) {
+    if (!cnjRegExp.test(string)) {
+      return new Cnj({
+        nnnnnnn: 0, dd: 0, aaaa: 0, j: 0, tr: 0, oooo: 0,
+      });
+    }
     const splitted = string.split(notNumber);
 
     let nnnnnnn: string;
@@ -174,11 +179,15 @@ export class Cnj {
   }
 
   isValid(): boolean {
-    const { j, tr } = this;
+    const { aaaa, j, tr } = this;
     const isValidCheckDigit = this.isValidCheckDigit();
 
     if (!isValidCheckDigit) {
       return isValidCheckDigit;
+    }
+
+    if (aaaa < 1850 || aaaa > new Date().getFullYear()) {
+      return false;
     }
 
     if (courts[j] && courts[j][tr]) {
