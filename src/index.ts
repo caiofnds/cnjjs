@@ -33,7 +33,7 @@ export class Cnj {
 
   static fromString(string: string) {
     const notNumber = /^0+|[^\d]+/g;
-    const cnjRegExp = /(\d{1,7})-?(\d{1,2}).?(\d{1,4}).?(\d{1}).?(\d{1,2}).?(\d{1,4})/;
+    const cnjRegExp = /(\d{1,7})-?(\d{1,2})\.?(\d{1,4})\.?(\d{1})\.?(\d{1,2})\.?(\d{1,4})/;
     const splitted = string.split(notNumber);
 
     let nnnnnnn: string;
