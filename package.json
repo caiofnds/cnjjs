@@ -1,6 +1,6 @@
 {
   "name": "cnjjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Conjunto de ferramentas para tratar númeração processual, em conformidade com os padrões do CNJ",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

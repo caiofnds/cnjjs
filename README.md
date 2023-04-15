@@ -120,11 +120,11 @@ Biblioteca escrita em typescript.
 
 ### Por [Node Package Manager (npm)](https://docs.npmjs.com/about-npm)
 ```sh
-npm install @botmax/cnj
+npm install cnjjs
 ```
 ### Por [Yarn](https://yarnpkg.com/getting-started)
 ```sh
-yarn add @botmaxbr/cnj
+yarn add cnjjs
 ```
 
 <p align="right">(<a href="#top">voltar ao topo</a>)</p>
@@ -142,7 +142,7 @@ yarn add @botmaxbr/cnj
 em [ECMAScript](https://nodejs.org/en/docs/es6/)
 
 ``` javascript
-import Cnj from '@botmaxbr/cnj';
+import Cnj from 'cnjjs';
 
 ```
 
@@ -158,7 +158,7 @@ const cnj = require('cnj')
 Exemplo de uso:
 
 ``` javascript
-import Cnj from '@botmaxbr/cnj';
+import Cnj from 'cnjjs';
 
 Cnj.fromString('1-35.0001.1.01.1').toString(); // output -> '1-35.0001.1.01.1'
 ```
@@ -188,7 +188,7 @@ Cnj.fromString('1-35.0001.1.01.1').toString(); // output -> '1-35.0001.1.01.1'
 Manipula dado recebendo uma string e fornecendo diferentes tipos na saída.
 ### com número
 ``` javascript
-import Cnj from '@botmaxbr/cnj';
+import Cnj from 'cnjjs';
 
 Cnj.fromString('1-35.0001.1.01.0001').toString(); // output -> '1-35.0001.1.01.0001'
 ```
@@ -203,26 +203,26 @@ Cnj.fromString('1-35.0001.1.01.0001').toString(); // output -> '1-35.0001.1.01.0
 > ## toObject()
 fornece um [Object] [1] na saída
 ``` javascript
-import Cnj from '@botmaxbr/cnj';
+import Cnj from 'cnjjs';
 
 Cnj.fromString('1-35.0001.1.01.0001').toObject(); // output -> nnnnnnn: 1, dd: 35, aaaa: 1, j: 1, tr: 1, oooo: 1
 ```
 ### com ano
 ``` javascript
-import Cnj from '@botmaxbr/cnj';
+import Cnj from 'cnjjs';
 
 Cnj.fromString('0000001-32.2001.1.01.0001').toObject() // output  ->  nnnnnnn: 1, dd: 32, aaaa: 2001, j: 1, tr: 1, oooo: 1
 ```
 
 ``` javascript
-import Cnj from '@botmax/cnj';
+import Cnj from 'cnjjs';
 
 Cnj.fromString('00000013220011010001').toObject(); // output  ->  nnnnnnn: 1, dd: 32, aaaa: 2001, j: 1, tr: 1, oooo: 1
 ```
 
 ### com valid number 
 ``` javascript
-import Cnj from '@botmax/cnj';
+import Cnj from 'cnjjs';
 
 Cnj.fromString('00011268-83.2012.811.0055').toObject(); // output -> 00011268-83.2012.811.0055
 ```
@@ -238,7 +238,7 @@ Cnj.fromString('00011268-83.2012.811.0055').toObject(); // output -> 00011268-83
 fornece um [array] [2] na saída
 #### com numeros
 ``` javascript
-import Cnj from '@botmaxbr/cnj';
+import Cnj from 'cnjjs';
 
 Cnj.fromString('1-35.0001.1.01.0001').toArray(); // output -> [1, 35, 1, 1, 1, 1]
 ```
@@ -250,13 +250,13 @@ Cnj.fromString('0000001-32.2001.1.01.0001').toArray(); // output -> [1, 32, 2001
 ```
 #### com uma string de números					
 ``` javascript
-import Cnj from '@botmaxbr/cnj';
+import Cnj from 'cnjjs';
 
 Cnj.fromString('1-35.0001.1.01.0001').toArray({ string: true }); // output -> ['0000001', '35', '0001', '1', '01', '0001']
 ```
 #### com uma string de ano					
 ``` javascript
-import Cnj from '@botmaxbr/cnj';
+import Cnj from 'cnjjs';
 
 Cnj.fromString('0000001-32.2001.1.01.0001').toArray({ string: true }); // output -> ['0000001', '32', '2001', '1', '01', '0001']
 ```
@@ -271,25 +271,25 @@ Cnj.fromString('0000001-32.2001.1.01.0001').toArray({ string: true }); // output
 fornece uma [string] [3] na saída
 #### string de números
 ``` javascript
-import Cnj from '@botmaxbr/cnj';
+import Cnj from 'cnjjs';
 
 Cnj.fromString('0000001-35.0001.1.01.0001').toString(); // output -> '0000001-35.0001.1.01.0001'
 ```
 #### string de números - opção flat 
 ``` javascript
-import Cnj from '@botmaxbr/cnj';
+import Cnj from 'cnjjs';
 
 Cnj.fromString('0000001-35.0001.1.01.0001').toString({ flat: true }); // output -> '00000013500011010001'
 ```
 #### string de ano
 ``` javascript
-import Cnj from '@botmaxbr/cnj';
+import Cnj from 'cnjjs';
 
 Cnj.fromString('0000001-32.2001.1.01.0001').toString(); // output -> '0000001-32.2001.1.01.0001'
 ```
 #### string de ano - opção flat  
 ``` javascript
-import Cnj from '@botmaxbr/cnj';
+import Cnj from 'cnjjs';
 
 Cnj.fromString('00011268-83.2012.811.0055').toString({ flat: true }); // output -> '00000013220011010001'
 ```
@@ -314,7 +314,7 @@ Formatos aceito como argumento: <br>
 
 
 ``` javascript
-import Cnj from '@botmaxbr/cnj';
+import Cnj from 'cnjjs';
 
 Cnj.fromString('00011268-83.2012.811.0055').toString({ flat: true }); // output -> true
 ```
@@ -322,7 +322,7 @@ Cnj.fromString('00011268-83.2012.811.0055').toString({ flat: true }); // output 
 <br>
 
 ``` javascript
-import Cnj from '@botmaxbr/cnj';
+import Cnj from 'cnjjs';
 
 Cnj.fromString('506354-19.2011.08.09.0051').toString({ flat: true }); // output -> true
 ```
@@ -330,7 +330,7 @@ Cnj.fromString('506354-19.2011.08.09.0051').toString({ flat: true }); // output 
 <br>
 
 ``` javascript
-import Cnj from '@botmaxbr/cnj';
+import Cnj from 'cnjjs';
 
 Cnj.fromString('5000.822.53.2013.827.2706').toString({ flat: true }); // output -> true
 ```
@@ -372,14 +372,14 @@ Cnj.fromString('00000013220011010001').isValid(); // output -> false
 
 Método [5] usado para manipular dado sem números de checagem. 
 ``` javascript
-import Cnj from '@botmaxbr/cnj';
+import Cnj from 'cnjjs';
 
 Cnj.withoutCheckDigit(1, 2001, 6, 26, 1); // output -> 0000001-19.2001.6.26.0001
 ```
 <br>
 
 ``` javascript
-import Cnj from '@botmaxbr/cnj';
+import Cnj from 'cnjjs';
 
 Cnj.withoutCheckDigit(1234567, 8901, 2, 34, 5678); // output -> 1234567-88.8901.2.34.5678 
 ```
