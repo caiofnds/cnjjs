@@ -1,7 +1,7 @@
 <div id="top"></div>
 	
-<h1 align=center > CNJ </h1>
-<h5 align=center > Biblioteca de métodos para manipulaçao de números cnj.</h5>
+<h1 > CNJ </h1>
+<h5 > Biblioteca de métodos para manipulaçao de números cnj.</h5>
 
 
 <!-- TABLE OF CONTENTS -->
@@ -11,7 +11,7 @@
     <li>
       <a href="#introducao">Introdução</a>
       <ul>
-	          <li><a href="#descricao">Descrição</a></li>
+        <li><a href="#descricao">Descrição</a></li>
 		  <li><a href="#sobre-cnj">Sobre o número cnj</a></li>
       </ul>
     </li>
@@ -41,7 +41,7 @@
 
 ## Introdução 
 <div align=right>
-<a href="https://github.com/botmaxbr/cnj/blob/main/Licença"><img src="https://img.shields.io/badge/Licença-MIT-red"></a> <a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/Linguagem-Typescript-blue"></a>
+<a href="https://github.com/caiofnds/cnjjs/blob/main/Licença"><img src="https://img.shields.io/badge/Licença-MIT-red"></a> <a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/Linguagem-Typescript-blue"></a>
 
 </div>
 	
@@ -60,7 +60,7 @@
 
 <div id=descricao ></div>
 
-🤖	Essa biblioteca desenvolvida através destes [testes](https://github.com/botmaxbr/cnj/tree/main/tests). Consulte o índice ou vide a [documentação](#documentacao) para ler detalhes à respeito dos métodos. Sabendo da discrepância nos sistemas de publicação online nos tribunais de justiça, a biblioteca foi moldada para aumentar a confiabilidade de sistemas de automatização de acesso, informação e registro de andamentos de processos judiciais. 
+🤖	Essa biblioteca desenvolvida através destes [testes](https://github.com/caiofnds/cnjjs/tree/main/tests). Consulte o índice ou vide a [documentação](#documentacao) para ler detalhes à respeito dos métodos. Sabendo da discrepância nos sistemas de publicação online nos tribunais de justiça, a biblioteca foi moldada para aumentar a confiabilidade de sistemas de automatização de acesso, informação e registro de andamentos de processos judiciais. 
 
 <br>
 
@@ -75,7 +75,7 @@
 
 * [Typescript](https://www.typescriptlang.org)
 
-Tanto a biblioteca quanto as APIs da Botmax foram escrita em typescript, para cobrir as vulnerabilidades do javascript.
+Biblioteca escrita em typescript.
 
 <p align="right">(<a href="#top">voltar ao topo</a>)</p>
 
@@ -142,7 +142,7 @@ yarn add @botmaxbr/cnj
 em [ECMAScript](https://nodejs.org/en/docs/es6/)
 
 ``` javascript
-import { Cnj } from '@botmaxbr/cnj';
+import Cnj from '@botmaxbr/cnj';
 
 ```
 
@@ -158,7 +158,7 @@ const cnj = require('cnj')
 Exemplo de uso:
 
 ``` javascript
-import { Cnj } from '@botmaxbr/cnj';
+import Cnj from '@botmaxbr/cnj';
 
 Cnj.fromString('1-35.0001.1.01.1').toString(); // output -> '1-35.0001.1.01.1'
 ```
@@ -188,7 +188,7 @@ Cnj.fromString('1-35.0001.1.01.1').toString(); // output -> '1-35.0001.1.01.1'
 Manipula dado recebendo uma string e fornecendo diferentes tipos na saída.
 ### com número
 ``` javascript
-import { Cnj } from '@botmaxbr/cnj';
+import Cnj from '@botmaxbr/cnj';
 
 Cnj.fromString('1-35.0001.1.01.0001').toString(); // output -> '1-35.0001.1.01.0001'
 ```
@@ -203,26 +203,26 @@ Cnj.fromString('1-35.0001.1.01.0001').toString(); // output -> '1-35.0001.1.01.0
 > ## toObject()
 fornece um [Object] [1] na saída
 ``` javascript
-import { Cnj } from '@botmaxbr/cnj';
+import Cnj from '@botmaxbr/cnj';
 
 Cnj.fromString('1-35.0001.1.01.0001').toObject(); // output -> nnnnnnn: 1, dd: 35, aaaa: 1, j: 1, tr: 1, oooo: 1
 ```
 ### com ano
 ``` javascript
-import { Cnj } from '@botmaxbr/cnj';
+import Cnj from '@botmaxbr/cnj';
 
 Cnj.fromString('0000001-32.2001.1.01.0001').toObject() // output  ->  nnnnnnn: 1, dd: 32, aaaa: 2001, j: 1, tr: 1, oooo: 1
 ```
 
 ``` javascript
-import { cnj } from '@botmax/cnj';
+import Cnj from '@botmax/cnj';
 
 Cnj.fromString('00000013220011010001').toObject(); // output  ->  nnnnnnn: 1, dd: 32, aaaa: 2001, j: 1, tr: 1, oooo: 1
 ```
 
 ### com valid number 
 ``` javascript
-import { cnj } from '@botmax/cnj';
+import Cnj from '@botmax/cnj';
 
 Cnj.fromString('00011268-83.2012.811.0055').toObject(); // output -> 00011268-83.2012.811.0055
 ```
@@ -238,25 +238,25 @@ Cnj.fromString('00011268-83.2012.811.0055').toObject(); // output -> 00011268-83
 fornece um [array] [2] na saída
 #### com numeros
 ``` javascript
-import { Cnj } from '@botmaxbr/cnj';
+import Cnj from '@botmaxbr/cnj';
 
 Cnj.fromString('1-35.0001.1.01.0001').toArray(); // output -> [1, 35, 1, 1, 1, 1]
 ```
 #### com ano					
 ``` javascript
-import { Cnj } from '@/index';
+import Cnj from '@/index';
 
 Cnj.fromString('0000001-32.2001.1.01.0001').toArray(); // output -> [1, 32, 2001, 1, 1, 1]
 ```
 #### com uma string de números					
 ``` javascript
-import { Cnj } from '@botmaxbr/cnj';
+import Cnj from '@botmaxbr/cnj';
 
 Cnj.fromString('1-35.0001.1.01.0001').toArray({ string: true }); // output -> ['0000001', '35', '0001', '1', '01', '0001']
 ```
 #### com uma string de ano					
 ``` javascript
-import { Cnj } from '@botmaxbr/cnj';
+import Cnj from '@botmaxbr/cnj';
 
 Cnj.fromString('0000001-32.2001.1.01.0001').toArray({ string: true }); // output -> ['0000001', '32', '2001', '1', '01', '0001']
 ```
@@ -271,25 +271,25 @@ Cnj.fromString('0000001-32.2001.1.01.0001').toArray({ string: true }); // output
 fornece uma [string] [3] na saída
 #### string de números
 ``` javascript
-import { Cnj } from '@botmaxbr/cnj';
+import Cnj from '@botmaxbr/cnj';
 
 Cnj.fromString('0000001-35.0001.1.01.0001').toString(); // output -> '0000001-35.0001.1.01.0001'
 ```
 #### string de números - opção flat 
 ``` javascript
-import { Cnj } from '@botmaxbr/cnj';
+import Cnj from '@botmaxbr/cnj';
 
 Cnj.fromString('0000001-35.0001.1.01.0001').toString({ flat: true }); // output -> '00000013500011010001'
 ```
 #### string de ano
 ``` javascript
-import { Cnj } from '@botmaxbr/cnj';
+import Cnj from '@botmaxbr/cnj';
 
 Cnj.fromString('0000001-32.2001.1.01.0001').toString(); // output -> '0000001-32.2001.1.01.0001'
 ```
 #### string de ano - opção flat  
 ``` javascript
-import { Cnj } from '@botmaxbr/cnj';
+import Cnj from '@botmaxbr/cnj';
 
 Cnj.fromString('00011268-83.2012.811.0055').toString({ flat: true }); // output -> '00000013220011010001'
 ```
@@ -314,7 +314,7 @@ Formatos aceito como argumento: <br>
 
 
 ``` javascript
-import { Cnj } from '@botmaxbr/cnj';
+import Cnj from '@botmaxbr/cnj';
 
 Cnj.fromString('00011268-83.2012.811.0055').toString({ flat: true }); // output -> true
 ```
@@ -322,7 +322,7 @@ Cnj.fromString('00011268-83.2012.811.0055').toString({ flat: true }); // output 
 <br>
 
 ``` javascript
-import { Cnj } from '@botmaxbr/cnj';
+import Cnj from '@botmaxbr/cnj';
 
 Cnj.fromString('506354-19.2011.08.09.0051').toString({ flat: true }); // output -> true
 ```
@@ -330,7 +330,7 @@ Cnj.fromString('506354-19.2011.08.09.0051').toString({ flat: true }); // output 
 <br>
 
 ``` javascript
-import { Cnj } from '@botmaxbr/cnj';
+import Cnj from '@botmaxbr/cnj';
 
 Cnj.fromString('5000.822.53.2013.827.2706').toString({ flat: true }); // output -> true
 ```
@@ -338,7 +338,7 @@ Cnj.fromString('5000.822.53.2013.827.2706').toString({ flat: true }); // output 
 <br>
 
 ``` javascript
-import { Cnj } from '@/index';
+import Cnj from '@/index';
 
 Cnj.fromString('00011268-83.2012.811.0055').toString({ flat: true }); // output -> false
 ```
@@ -346,14 +346,14 @@ Cnj.fromString('00011268-83.2012.811.0055').toString({ flat: true }); // output 
 <br>
 
 ``` javascript
-import { Cnj } from '@/index';
+import Cnj from '@/index';
 
 Cnj.fromString('string string string string').isValid(); // output -> false
 ```
 <br>
 
 ``` javascript
-import { Cnj } from '@/index';
+import Cnj from '@/index';
 
 Cnj.fromString('00000013220011010001').isValid(); // output -> false
 ```
@@ -372,14 +372,14 @@ Cnj.fromString('00000013220011010001').isValid(); // output -> false
 
 Método [5] usado para manipular dado sem números de checagem. 
 ``` javascript
-import { Cnj } from '@botmaxbr/cnj';
+import Cnj from '@botmaxbr/cnj';
 
 Cnj.withoutCheckDigit(1, 2001, 6, 26, 1); // output -> 0000001-19.2001.6.26.0001
 ```
 <br>
 
 ``` javascript
-import { Cnj } from '@botmaxbr/cnj';
+import Cnj from '@botmaxbr/cnj';
 
 Cnj.withoutCheckDigit(1234567, 8901, 2, 34, 5678); // output -> 1234567-88.8901.2.34.5678 
 ```

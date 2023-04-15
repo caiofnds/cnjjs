@@ -1,4 +1,4 @@
-import courts from '@/data/courts.json';
+import courts from './data/courts.json';
 
 interface ICnj {
   nnnnnnn: number;
@@ -13,7 +13,7 @@ const notNumber = /^0+|[^\d]+/g;
 const cnjRegExp = /(\d{1,7})-?(\d{1,2})\.?(\d{1,4})\.?(\d{1})\.?(\d{1,2})\.?(\d{1,4})/;
 const cnjTrtRegExp = /(\d{1,7})-?XX\.?(\d{1,4})\.?5\.?(\d{1,2})\.?(\d{1,4})/;
 
-export class Cnj {
+class Cnj {
   nnnnnnn: number;
 
   dd: number;
@@ -129,6 +129,9 @@ export class Cnj {
   }
 
   toString({ flat } = { flat: false }): string {
+    if (!this.isValid()) {
+      return null;
+    }
     const {
       nnnnnnn, dd, aaaa, j, tr, oooo,
     } = this;
@@ -146,6 +149,9 @@ export class Cnj {
   }
 
   toArray({ string } = { string: false }): number[] | string[] {
+    if (!this.isValid()) {
+      return null;
+    }
     const {
       nnnnnnn, dd, aaaa, j, tr, oooo,
     } = this;
@@ -196,3 +202,5 @@ export class Cnj {
     return false;
   }
 }
+
+export default Cnj;

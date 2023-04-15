@@ -1,4 +1,4 @@
-import { Cnj } from '@/index';
+import Cnj from '@/index';
 
 describe('method isValid', () => {
   describe('invalid number 0000001-32.2001.1.01.0001', () => {

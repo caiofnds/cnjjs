@@ -1,6 +1,6 @@
 {
-  "name": "@botmaxbr/cnj",
-  "version": "1.0.1",
+  "name": "cnjjs",
+  "version": "1.0.0",
   "description": "Conjunto de ferramentas para tratar númeração processual, em conformidade com os padrões do CNJ",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/botmaxbr/cnj.git"
+    "url": "git+https://github.com/caiofnds/cnjjs.git"
   },
-  "author": "Botmax <contato@botmax.com.br>",
-  "license": "UNLICENSED",
+  "author": "Caio Flores Duarte <caio@botmax.com.br>",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/botmaxbr/cnj/issues"
+    "url": "https://github.com/caiofnds/cnjjs/issues"
   },
-  "homepage": "https://github.com/botmaxbr/cnj#readme",
+  "homepage": "https://github.com/caiofnds/cnjjs#readme",
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^26.0.23",
