@@ -84,8 +84,8 @@ describe('method isValid', () => {
       const validity = Cnj.fromString('0000001-64.2001.3.01.0001').isValid();
       expect(validity).toBeFalsy();
     });
-    test('0000001-42.2001.4.06.0001', () => {
-      const validity = Cnj.fromString('0000001-42.2001.4.06.0001').isValid();
+    test('0000001-85.2001.4.08.0001', () => {
+      const validity = Cnj.fromString('0000001-85.2001.4.08.0001').isValid();
       expect(validity).toBeFalsy();
     });
     test('0000001-30.2001.5.25.0001', () => {
@@ -163,7 +163,7 @@ describe('method isValid', () => {
       expect(validity).toBeTruthy();
     });
   });
-  describe('valid number com ano incorretp', () => {
+  describe('valid number com ano incorreto', () => {
     test('0000001-32.1849.1.01.0001', () => {
       const validity = Cnj.fromString('0000001-32.1849.1.01.0001').isValid();
       expect(validity).toBeFalsy();
