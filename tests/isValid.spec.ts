@@ -173,4 +173,34 @@ describe('method isValid', () => {
       expect(validity).toBeFalsy();
     });
   });
+  describe('valid number com ano incorreto', () => {
+    test('0535659-58.0089.8.26.0014', () => {
+      const validity = Cnj.fromString('0535659-58.0089.8.26.0014').isValid();
+      expect(validity).toBeTruthy();
+    });
+    test('0058672-78.1000.8.26.0090', () => {
+      const validity = Cnj.fromString('0058672-78.1000.8.26.0090').isValid();
+      expect(validity).toBeTruthy();
+    });
+    test('0135226-69.0700.8.26.0090', () => {
+      const validity = Cnj.fromString('0135226-69.0700.8.26.0090').isValid();
+      expect(validity).toBeTruthy();
+    });
+    test('0675435-18.0800.8.26.0090', () => {
+      const validity = Cnj.fromString('0675435-18.0800.8.26.0090').isValid();
+      expect(validity).toBeTruthy();
+    });
+    test('0548084-20.0089.8.26.0014', () => {
+      const validity = Cnj.fromString('0548084-20.0089.8.26.0014').isValid();
+      expect(validity).toBeTruthy();
+    });
+    test('0767848-90.9700.8.26.0090', () => {
+      const validity = Cnj.fromString('0767848-90.9700.8.26.0090').isValid();
+      expect(validity).toBeTruthy();
+    });
+    test('0715366-28.0800.8.26.0090', () => {
+      const validity = Cnj.fromString('0715366-28.0800.8.26.0090').isValid();
+      expect(validity).toBeTruthy();
+    });
+  });
 });

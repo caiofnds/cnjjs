@@ -185,14 +185,19 @@ class Cnj {
   }
 
   isValid(): boolean {
-    const { aaaa, j, tr } = this;
+    const {
+      aaaa, j, tr, oooo,
+    } = this;
     const isValidCheckDigit = this.isValidCheckDigit();
 
     if (!isValidCheckDigit) {
       return isValidCheckDigit;
     }
 
-    if (aaaa < 1850 || aaaa > new Date().getFullYear()) {
+    if (
+      (aaaa < 1850 || aaaa > new Date().getFullYear())
+      && !(j === 8 && tr === 26 && [90, 14].includes(oooo))
+    ) {
       return false;
     }
 
